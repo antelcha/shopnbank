@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Lyon Display';
+  src: url('/fonts/51e70f5768d33937e8b0bd9434dd2f21.woff2') format('woff2'),
+       url('/fonts/51e70f5768d33937e8b0bd9434dd2f21.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse International';
+  src: url('/fonts/88f10bf18a36407ef36bf30bc25a3618.woff2') format('woff2'),
+       url('/fonts/88f10bf18a36407ef36bf30bc25a3618.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Grain texture overlay */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0),
+    radial-gradient(circle at 5px 5px, rgba(255,255,255,0.1) 1px, transparent 0),
+    radial-gradient(circle at 10px 10px, rgba(255,255,255,0.05) 1px, transparent 0);
+  background-size: 
+    15px 15px,
+    25px 25px,
+    35px 35px;
+  background-position: 
+    0 0,
+    7px 7px,
+    14px 14px;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Global font family */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Card glow effect */
+.card-glow {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card-glow:hover {
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.2),
+    0 0 80px rgba(255, 255, 255, 0.1);
+}
